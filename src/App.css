@@ -1,0 +1,22 @@
+.dark .myBG {
+    background: linear-gradient(180deg, #4e5988 0%, #382f42 100%);
+}
+.myBG {
+    background: linear-gradient(180deg, #c1ceef 0%, #8787c8 100%);
+}
+
+.myBGImage {
+    background: radial-gradient(ellipse , #000000 24%, #164d50 100%);
+}
+
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

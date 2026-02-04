@@ -1,0 +1,28 @@
+import { NavLink } from "react-router-dom";
+import linkClass from "../../LinkClass/IsActive.ts";
+
+const AdminSidebar = () => {
+
+
+    return (
+        <aside className="w-64 dark:bg-gray-900 bg-gray-200 dark:text-white text-gray-700 p-4">
+            <h2 className="mb-6 text-xl font-bold">Адмін панель</h2>
+
+            <nav className="space-y-2">
+                <NavLink to="/Admin" className={linkClass} end>
+                    Dashboard
+                </NavLink>
+
+                <NavLink to="Countries" className={linkClass} end>
+                    Countries
+                </NavLink>
+
+                <NavLink to="Cities" className={linkClass} end>
+                    Cities
+                </NavLink>
+            </nav>
+        </aside>
+    );
+};
+
+export default AdminSidebar;
