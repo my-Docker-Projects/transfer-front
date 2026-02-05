@@ -7,26 +7,25 @@
 docker images
 
 #Створення image
-docker build -t my-transfer-app .
+docker build -t transfer-front .
 
 #Перед цим залогінитись у hub.docker.com
 docker login
 
 #Створення тега
 #tag - це назва репозиторія на hub.docker.com
-docker tag my-transfer-app:latest avalentyn/my-transfer-app:latest
+docker tag transfer-front:latest avalentyn/transfer-front:latest
 
 docker images
 
 #Запушити image на hub.docker.com
-docker push avalentyn/my-transfer-app:latest
+docker push avalentyn/transfer-front:latest
 
 #Видалити image
-docker rmi avalentyn/my-transfer-app:latest
-docker rmi my-transfer-app
+docker rmi avalentyn/transfer-front:latest
+docker rmi transfer-front
 
-docker run -d --restart=always --name my-transfer-app-container -p 5234:80 avalentyn/my-transfer-app:latest
-docker run -d --restart=always --name my-transfer-app-container -p 5233:80 my-transfer-app:latest          
+docker run -d --restart=always --name transfer-front-container -p 5234:80 avalentyn/transfer-front:latest
+docker run -d --restart=always --name transfer-front-container -p 5233:80 transfer-front:latest          
 
-#Додали файл .dockerignore
 ```
