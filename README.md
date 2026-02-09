@@ -26,6 +26,14 @@ docker rmi avalentyn/transfer-front:latest
 docker rmi transfer-front
 
 docker run -d --restart=always --name transfer-front-container -p 5234:80 avalentyn/transfer-front:latest
-docker run -d --restart=always --name transfer-front-container -p 5233:80 transfer-front:latest          
+docker run -d --restart=always --name transfer-front-container -p 5233:80 transfer-front:latest     
+
+
+Пушу на docker hub свої образи фронту та беку
+docker tag transfer-front:latest avalentyn/transfer-front:latest
+docker push avalentyn/transfer-front:latest
+
+docker tag transfer-back:latest avalentyn/transfer-back:latest
+docker push avalentyn/transfer-back:latest
 
 ```
